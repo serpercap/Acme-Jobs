@@ -20,3 +20,11 @@ authenticated.offer.form.label.moment = Momento
 authenticated.offer.form.label.deadline = Finalizacion
 authenticated.offer.form.label.title = Titulo
 authenticated.offer.form.label.ticker = Ticker
+
+authenticated.offer.form.label.accept = Acepto que mi oferta una vez creada no podra ser ni eliminada ni modificada
+authenticated.offer.form.label.unique = El ticker debe ser unico
+authenticated.offer.form.label.reward.error = La recompensa debe estar en EUR
+authenticated.offer.form.label.deadline.error = La fecha debe ser en futuro
+authenticated.offer.form.label.accept = Debe aceptar las condiciones
+
+authenticated.offer.form.button.create = Crear oferta
