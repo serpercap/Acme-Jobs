@@ -46,6 +46,7 @@ master.menu.administrator.announcement = List all announcements
 master.menu.administrator.announcement.create = Create announcement
 master.menu.administrator.banner = Banner
 master.menu.administrator.customizationParameters = Customization parameters
+master.menu.administrator.customizationParameters.create = Add spam word
 master.menu.administrator.dashboard = Dashboard
 
 

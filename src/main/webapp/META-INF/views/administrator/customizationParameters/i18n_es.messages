@@ -15,4 +15,9 @@ administrator.customization.form.label.spamThreshold = Spam threshold
 administrator.customization.list.label.spamWordsEN = Palabras de spam en Ingles
 administrator.customization.list.label.spamWordsES = Palabras de spam en Español
 
+
+administrator.customization.form.button.update = Actualizar
+administrator.customization.form.button.create = Crear
+administrator.customization.form.button.delete = Eliminar
+
 administrator.customization.form.button.return = Return
