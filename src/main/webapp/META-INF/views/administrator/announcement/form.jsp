@@ -7,8 +7,8 @@
 	<acme:form-textbox code="administrator.announcement.form.label.title" path="title"/>
 	<jstl:if test="${command != 'create'}">
 	<acme:form-moment 
-	code="administrator.announcement.form.label.title"
-	path="title"
+	code="administrator.announcement.form.label.moment"
+	path="moment"
 	readonly="true"/>
 	</jstl:if>
 	

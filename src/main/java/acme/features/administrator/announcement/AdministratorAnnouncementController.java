@@ -21,6 +21,13 @@ public class AdministratorAnnouncementController extends AbstractController<Admi
 	AdministratorAnnouncementListService	listService;
 	@Autowired
 	AdministratorAnnouncementShowService	showService;
+	@Autowired
+	AdministratorAnnouncementDeleteService	deleteService;
+	@Autowired
+	AdministratorAnnouncementUpdateService	updateService;
+	@Autowired
+	AdministratorAnnouncementCreateService	createService;
+
 	//Constructors
 
 
@@ -28,5 +35,9 @@ public class AdministratorAnnouncementController extends AbstractController<Admi
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+
 	}
 }
