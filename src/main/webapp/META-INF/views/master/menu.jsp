@@ -34,6 +34,7 @@
 			<acme:menu-suboption code="master.menu.administrator.announcement" action="/administrator/announcement/list"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
 			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/list"/>
+			<acme:menu-suboption code="master.menu.administrator.customizationParameters.create" action="/administrator/customization-parameters/create"/>
 			<acme:menu-suboption code="master.menu.administrator.banner" action="/administrator/banner/list"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show-data"/>
 			<acme:menu-separator/>
