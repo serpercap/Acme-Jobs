@@ -18,9 +18,15 @@ public class AdministratorBannerController extends AbstractController<Administra
 
 	//Internal State
 	@Autowired
-	AdministratorBannerListService	listService;
+	AdministratorBannerListService		listService;
 	@Autowired
-	AdministratorBannerShowService	showService;
+	AdministratorBannerShowService		showService;
+	@Autowired
+	AdministratorBannerUpdateService	updateService;
+	@Autowired
+	AdministratorBannerDeleteService	deleteService;
+	@Autowired
+	AdministratorBannerCreateService	createService;
 	//Constructors
 
 
@@ -28,5 +34,8 @@ public class AdministratorBannerController extends AbstractController<Administra
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 }
