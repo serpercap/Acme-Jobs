@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedInvestorRecordShowService implements AbstractShowService<Authenticated, InvestorRecord> {
+public class AdministratorInvestorRecordShowService implements AbstractShowService<Administrator, InvestorRecord> {
 
 	//Internal State -----------------------------
 	@Autowired
-	AuthenticatedInvestorRecordRepository repository;
+	AdministratorInvestorRecordRepository repository;
 
 
 	// AbstractShowService<Authenticated,investorRecord>

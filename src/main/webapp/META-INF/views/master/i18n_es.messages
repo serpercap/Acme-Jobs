@@ -47,6 +47,8 @@ master.menu.administrator.announcement.create = Crear anuncio
 master.menu.administrator.banner = Banner
 master.menu.administrator.customizationParameters = Parametros de configuracion
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.investorRecord= Lista de registros de inversion
+master.menu.administrator.investorRecord.create= Crear nuevo registro de inversionista
 
 # master.menu.provider ########################################################
 

@@ -5,8 +5,8 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.investorRecord.form.label.name" path="name"/>
-	<acme:form-moment code="authenticated.investorRecord.form.label.sector" path="sector"/>
-	<acme:form-moment code="authenticated.investorRecord.form.label.investingStatement" path="investingStatement"/>
+	<acme:form-textbox code="authenticated.investorRecord.form.label.sector" path="sector"/>
+	<acme:form-double code="authenticated.investorRecord.form.label.investingStatement" path="investingStatement"/>
 	<acme:form-textbox code="authenticated.investorRecord.form.label.star" path="stars"/>
 	
 	<acme:form-return code="authenticated.investorRecord.form.button.return"/>
