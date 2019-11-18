@@ -32,7 +32,9 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.administrator.records" action="/administrator/records/list"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
+			<acme:menu-suboption code="master.menu.administrator.records.create" action="/administrator/records/create"/>
 			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/list"/>
 			<acme:menu-suboption code="master.menu.administrator.customizationParameters.create" action="/administrator/customization-parameters/create"/>
 			<acme:menu-suboption code="master.menu.administrator.banner" action="/administrator/banner/list"/>
