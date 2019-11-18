@@ -25,5 +25,9 @@
 	<definition name="authenticated/request/form" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/request/form.jsp" />
 	</definition>
+	
+	<definition name="provider/request/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/request/form.jsp" />
+	</definition>
 
 </tiles-definitions>
