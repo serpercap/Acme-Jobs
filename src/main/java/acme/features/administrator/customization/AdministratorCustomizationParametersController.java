@@ -18,9 +18,15 @@ public class AdministratorCustomizationParametersController extends AbstractCont
 
 	//Internal State
 	@Autowired
-	AdministratorCustomizationParametersShowService	showService;
+	AdministratorCustomizationParametersShowService		showService;
 	@Autowired
-	AdministratorCustomizationParametersListService	listService;
+	AdministratorCustomizationParametersListService		listService;
+	@Autowired
+	AdministratorCustomizationParametersCreateService	createService;
+	@Autowired
+	AdministratorCustomizationParametersUpdateService	updateService;
+	@Autowired
+	AdministratorCustomizationParametersDeleteService	deleteService;
 	//Constructors
 
 
@@ -28,5 +34,8 @@ public class AdministratorCustomizationParametersController extends AbstractCont
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 }

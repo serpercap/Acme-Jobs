@@ -1,5 +1,5 @@
 
-package acme.features.administrator.banner;
+package acme.features.administrator.investorRecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,29 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.banner.Banner;
+import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/banner/")
-public class AdministratorBannerController extends AbstractController<Administrator, Banner> {
+@RequestMapping("/administrator/investor-record/")
+public class AdministratorInvestorRecordController extends AbstractController<Administrator, InvestorRecord> {
 
 	//Internal State
 	@Autowired
-	AdministratorBannerListService		listService;
+	AdministratorInvestorRecordListService		listService;
 	@Autowired
-	AdministratorBannerShowService		showService;
+	AdministratorInvestorRecordShowService		showService;
 	@Autowired
-	AdministratorBannerUpdateService	updateService;
+	AdministratorInvestorRecordUpdateService	updateService;
 	@Autowired
-	AdministratorBannerDeleteService	deleteService;
+	AdministratorInvestorRecordDeleteService	deleteService;
 	@Autowired
-	AdministratorBannerCreateService	createService;
+	AdministratorInvestorRecordCreateService	createService;
+
+
 	//Constructors
-
-
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);

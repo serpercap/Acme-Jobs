@@ -1,4 +1,3 @@
-
 package acme.features.administrator.announcement;
 
 import java.util.Date;
@@ -21,7 +20,6 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 	AdministratorAnnouncementRepository repository;
 
 
-	// AbstractListService<administrator, Announcement>
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
@@ -35,6 +33,7 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert errors != null;
 
 		request.bind(entity, errors, "moment");
+
 	}
 
 	@Override
@@ -43,16 +42,20 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment", "title");
+		request.unbind(entity, model, "moment", "moreInfo", "title", "text");
 
 	}
 
 	@Override
 	public Announcement instantiate(final Request<Announcement> request) {
-		Announcement result;
+		Announcement result = new Announcement();
+		Date moment;
 
-		result = new Announcement();
-
+		moment = new Date(System.currentTimeMillis() - 1);
+		result.setMoment(moment);
+		result.setMoreInfo("http://acme.com");
+		result.setTitle("Titulo 1");
+		result.setText("Texto de ejemplo");
 		return result;
 	}
 
@@ -61,13 +64,19 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
 	}
+
 	@Override
 	public void create(final Request<Announcement> request, final Announcement entity) {
+		assert request != null;
+		assert entity != null;
 		Date moment;
+
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
 		this.repository.save(entity);
+
 	}
 
 }

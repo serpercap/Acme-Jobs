@@ -43,10 +43,15 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement = Listar todos los anuncios
-master.menu.administrator.announcement.create = Crear
+master.menu.administrator.announcement.create = Crear anuncio
+master.menu.administrator.records.create = Crear compañia de registros
+master.menu.administrator.banner.create = Crear banner
 master.menu.administrator.banner = Banner
 master.menu.administrator.customizationParameters = Parametros de configuracion
+master.menu.administrator.customizationParameters.create = Añadir palabra de spam
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.investorRecord= Lista de registros de inversion
+master.menu.administrator.investorRecord.create= Crear nuevo registro de inversionista
 
 # master.menu.provider ########################################################
 

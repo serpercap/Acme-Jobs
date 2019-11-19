@@ -1,4 +1,3 @@
-
 package acme.features.administrator.announcement;
 
 import java.util.Date;
@@ -21,7 +20,6 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 	AdministratorAnnouncementRepository repository;
 
 
-	// AbstractListService<administrator, Announcement>
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
@@ -35,6 +33,7 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		assert errors != null;
 
 		request.bind(entity, errors, "moment");
+
 	}
 
 	@Override
@@ -43,18 +42,18 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "text", "moreInfo");
-
+		request.unbind(entity, model, "moment", "moreInfo", "title", "text");
 	}
 
 	@Override
 	public Announcement findOne(final Request<Announcement> request) {
 		assert request != null;
-		Announcement result;
-		int id;
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAnnouncementById(id);
 
+		Announcement result = new Announcement();
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 		return result;
 	}
 
@@ -63,15 +62,19 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
 	}
+
 	@Override
 	public void update(final Request<Announcement> request, final Announcement entity) {
 		assert request != null;
 		assert entity != null;
 		Date moment;
+
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
 		this.repository.save(entity);
+
 	}
 
 }
