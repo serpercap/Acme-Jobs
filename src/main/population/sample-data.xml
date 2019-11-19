@@ -89,42 +89,24 @@
 		<property name="ticker" value="OADCW-75055"/>
 	</bean>
 	<!-- CUSTOMIZATION PARAMETERS -->
-	<bean id="SpamWords01" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="Sex"/>
-		<property name="spamWordES" value="Sexo"/>
+  <bean id="SpamWords" class="acme.entities.customizationParameters.CustomizationParameters">
+		<property name="spamWords">
+			<list>
+				<value>cialis</value>
+				<value>million dollar</value>
+				<value>millon de dolares</value>
+				<value>you've won</value>
+				<value>has ganado</value>
+				<value>nigeria</value>
+				<value>viagra</value>
+				<value>hard core</value>
+				<value>sex</value>
+				<value>sexo</value>
+			</list>
+		</property>
 		<property name="spamThreshold" value="1.0"/>
 	</bean>
-	<bean id="SpamWords02" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="hard core"/>
-		<property name="spamWordES" value="hard core"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-	<bean id="SpamWords03" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="viagra"/>
-		<property name="spamWordES" value="viagra"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-	<bean id="SpamWords04" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="nigeria"/>
-		<property name="spamWordES" value="nigeria"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-	<bean id="SpamWords05" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="you’ve won"/>
-		<property name="spamWordES" value="has ganado"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-	<bean id="SpamWords06" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="million dollar"/>
-		<property name="spamWordES" value="millon de dolares"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-	<bean id="SpamWords07" class="acme.entities.customizationParameters.CustomizationParameters">
-		<property name="spamWordEN" value="cialis"/>
-		<property name="spamWordES" value="cialis"/>
-		<property name="spamThreshold" value="1.0"/>
-	</bean>
-  
+	<!-- CHALLENGE -->
 <bean id="challenge01" class="acme.entities.challenge.Challenge">
 	<property name="title" value="Sample challenge 01" />
 	<property name="deadline" value="2020/01/01 00:00" />
@@ -237,31 +219,31 @@
 		<property name="name" value="Titulo01"/>
 		<property name="sector" value="Sector01"/>
 		<property name="investingStatement" value="10.0"/>
-		<property name="stars" value="2"/>
+		<property name="stars" value="2.0"/>
 	</bean>
 	<bean id="InvestorRecord02" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Titulo02"/>
 		<property name="sector" value="Sector02"/>
 		<property name="investingStatement" value="20.5"/>
-		<property name="stars" value="1"/>
+		<property name="stars" value="1.0"/>
 	</bean>
 	<bean id="InvestorRecord03" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Titulo03"/>
 		<property name="sector" value="Sector03"/>
 		<property name="investingStatement" value="50.2"/>
-		<property name="stars" value="1"/>
+		<property name="stars" value="1.0"/>
 	</bean>
 	<bean id="InvestorRecord04" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Titulo04"/>
 		<property name="sector" value="Sector04"/>
 		<property name="investingStatement" value="5.0"/>
-		<property name="stars" value="4"/>
+		<property name="stars" value="4.0"/>
 	</bean>
 	<bean id="InvestorRecord05" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Titulo05"/>
 		<property name="sector" value="Sector04"/>
 		<property name="investingStatement" value="35.3"/>
-		<property name="stars" value="5"/>
+		<property name="stars" value="5.0"/>
 	</bean>
   <!-- REQUESTS -->
 	<bean id="Request01" class="acme.entities.request.Request">

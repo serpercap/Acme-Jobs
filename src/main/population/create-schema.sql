@@ -68,9 +68,12 @@
        `id` integer not null,
         `version` integer not null,
         `spam_threshold` double precision,
-        `spam_worden` varchar(255),
-        `spam_wordes` varchar(255),
         primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `customization_parameters_spam_words` (
+       `customization_parameters_id` integer not null,
+        `spam_words` varchar(255)
     ) engine=InnoDB;
 
     create table `investor_record` (
@@ -79,7 +82,7 @@
         `investing_statement` double precision,
         `name` varchar(255),
         `sector` varchar(255),
-        `stars` integer,
+        `stars` double precision,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -189,6 +192,11 @@
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `customization_parameters_spam_words` 
+       add constraint `FKhcqquyqtys40tece78apjsbyt` 
+       foreign key (`customization_parameters_id`) 
+       references `customization_parameters` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

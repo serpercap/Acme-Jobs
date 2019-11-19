@@ -1,6 +1,8 @@
 
 package acme.features.administrator.challenge;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,7 +63,8 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		Date moment = new Date(System.currentTimeMillis());
+		errors.state(request, entity.getDeadline().after(moment), "deadline", "administrator.challenge.form.label.deadline.error");
 	}
 
 	@Override
