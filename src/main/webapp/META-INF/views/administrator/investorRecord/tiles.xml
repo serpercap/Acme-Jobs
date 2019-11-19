@@ -18,16 +18,12 @@
 	
 <tiles-definitions>
 
-	<definition name="authenticated/request/list" extends="master">		
-		<put-attribute name="body" type="template" value="../authenticated/request/list.jsp" />
+	<definition name="administrator/investor-record/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/investorRecord/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/request/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/request/form.jsp" />
-	</definition>
-	
-	<definition name="provider/request/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/request/form.jsp" />
+	<definition name="administrator/investor-record/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/investorRecord/form.jsp" />
 	</definition>
 
 </tiles-definitions>

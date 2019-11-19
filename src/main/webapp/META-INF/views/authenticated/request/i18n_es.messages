@@ -22,3 +22,11 @@ authenticated.request.form.label.moment = Momento
 authenticated.request.form.label.deadline = Fecha límite
 authenticated.request.form.label.title = Título
 authenticated.request.form.label.ticker = Pet. Nº
+
+authenticated.request.form.label.accept = Acepto que, una vez creada, mi petición no puede ser alterada ni modificada.
+authenticated.request.form.label.unique = El número de la petición ha de ser único.
+authenticated.request.form.label.reward.error = La recompensa ha de estar en euros.
+authenticated.request.form.label.deadline.error = La fecha límite ha de estar en el futuro.
+authenticated.request.form.label.accept = Debe aceptar las condiciones.
+
+authenticated.request.form.button.create = Crear petición

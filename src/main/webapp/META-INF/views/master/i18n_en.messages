@@ -46,16 +46,24 @@ master.menu.administrator.announcement = List all announcements
 master.menu.administrator.challenge = List all challenges
 master.menu.administrator.announcement.create = Create announcement
 master.menu.administrator.challenge.create = Create challenge
+master.menu.administrator.records.create = Create Company Records
+master.menu.administrator.records = List all Company Records
+master.menu.administrator.banner.create = Create Banner
+
 master.menu.administrator.banner = Banner
 master.menu.administrator.customizationParameters = Customization parameters
 master.menu.administrator.customizationParameters.create = Add spam word
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.investorRecord= List Investor Records
+master.menu.administrator.investorRecord.create= Create new InvestorRecord
+
 
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request.create = Create request
 
 # master.menu.consumer ##########################################################
 

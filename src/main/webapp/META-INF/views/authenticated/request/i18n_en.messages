@@ -22,3 +22,11 @@ authenticated.request.form.label.moment = Moment
 authenticated.request.form.label.deadline = Deadline
 authenticated.request.form.label.title = Title
 authenticated.request.form.label.ticker = Ticker
+
+authenticated.request.form.label.accept = I accept that my request once created cannot be deleted or modified.
+authenticated.request.form.label.unique = Ticker must be unique.
+authenticated.request.form.label.reward.error = Reward must be in EUR.
+authenticated.request.form.label.deadline.error = Deadline must be in future.
+authenticated.request.form.label.accept = Must accept the conditions.
+
+authenticated.request.form.button.create = Create request
