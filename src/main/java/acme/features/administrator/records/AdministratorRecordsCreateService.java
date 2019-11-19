@@ -67,8 +67,6 @@ public class AdministratorRecordsCreateService implements AbstractCreateService<
 	public void create(final Request<Records> request, final Records entity) {
 		assert request != null;
 		assert entity != null;
-		String ceo = "Ceo";
-		entity.setCeo(ceo);
 		this.repository.save(entity);
 
 	}

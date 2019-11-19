@@ -68,9 +68,6 @@ public class AdministratorRecordsUpdateService implements AbstractUpdateService<
 	public void update(final Request<Records> request, final Records entity) {
 		assert request != null;
 		assert entity != null;
-		String ceo = "Capi Ceo";
-
-		entity.setCeo(ceo);
 		this.repository.save(entity);
 
 	}

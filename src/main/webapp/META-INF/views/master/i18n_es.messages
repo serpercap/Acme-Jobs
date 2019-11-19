@@ -44,6 +44,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement = Listar todos los anuncios
 master.menu.administrator.announcement.create = Crear anuncio
+master.menu.administrator.announcement = Listar todas las Compañias de registro
 master.menu.administrator.records.create = Crear compañia de registros
 master.menu.administrator.banner.create = Crear banner
 master.menu.administrator.banner = Banner

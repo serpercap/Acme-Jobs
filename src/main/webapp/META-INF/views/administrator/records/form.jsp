@@ -5,9 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="administrator.records.form.label.name" path="name"/>
-	<jstl:if test="${command != 'create'}">
-	<acme:form-moment code="administrator.records.form.label.ceo" path="ceo" readonly="true"/>
-	</jstl:if>
+	<acme:form-moment code="administrator.records.form.label.ceo" path="ceo"/>
 		<acme:form-textbox code="administrator.records.form.label.sector" path="sector"/>
 	<acme:form-textarea code="administrator.records.form.label.description" path="description"/>
 	<acme:form-url code="administrator.records.form.label.website" path="website"/>
