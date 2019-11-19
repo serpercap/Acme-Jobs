@@ -50,6 +50,9 @@ master.menu.administrator.banner = Banner
 master.menu.administrator.customizationParameters = Customization parameters
 master.menu.administrator.customizationParameters.create = Add spam word
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.investorRecord= List Investor Records
+master.menu.administrator.investorRecord.create= Create new InvestorRecord
+
 
 
 # master.menu.provider ########################################################

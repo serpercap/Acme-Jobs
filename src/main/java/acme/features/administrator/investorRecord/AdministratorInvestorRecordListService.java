@@ -1,5 +1,7 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorRecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,18 +9,18 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInvestorRecordShowService implements AbstractShowService<Authenticated, InvestorRecord> {
+public class AdministratorInvestorRecordListService implements AbstractListService<Administrator, InvestorRecord> {
 
 	//Internal State -----------------------------
 	@Autowired
-	AuthenticatedInvestorRecordRepository repository;
+	AdministratorInvestorRecordRepository repository;
 
 
-	// AbstractShowService<Authenticated,investorRecord>
+	// AbstractListService<Administrators, InvestorRecord>
 	@Override
 	public boolean authorise(final Request<InvestorRecord> request) {
 		assert request != null;
@@ -34,17 +36,13 @@ public class AuthenticatedInvestorRecordShowService implements AbstractShowServi
 		request.unbind(entity, model, "name", "sector", "investingStatement", "stars");
 
 	}
+
 	@Override
-	public InvestorRecord findOne(final Request<InvestorRecord> request) {
+	public Collection<InvestorRecord> findMany(final Request<InvestorRecord> request) {
 		assert request != null;
 
-		InvestorRecord result;
-		int id;
-
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
-
+		Collection<InvestorRecord> result;
+		result = this.repository.findManyAll();
 		return result;
 	}
-
 }
