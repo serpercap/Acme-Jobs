@@ -1,5 +1,5 @@
 
-package acme.entities.challenges;
+package acme.entities.challenge;
 
 import java.util.Date;
 
