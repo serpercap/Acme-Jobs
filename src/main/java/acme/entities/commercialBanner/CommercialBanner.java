@@ -1,5 +1,5 @@
 
-package acme.entities.banner;
+package acme.entities.commercialBanner;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends DomainEntity {
+public class CommercialBanner extends DomainEntity {
 
 	// Serialisation identifier
 
@@ -31,4 +31,8 @@ public class Banner extends DomainEntity {
 	@NotBlank
 	@URL
 	private String				url;
+
+	@NotBlank
+	private String				card;
+
 }

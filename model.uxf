@@ -469,7 +469,7 @@ NonCommercialBanner
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 CommercialBanner
 --
-+ creditCard: String {NotBlank, CreditCardNumber}
++ card: String {NotBlank, cardNumber}
 </panel_attributes>
     <additional_attributes/>
   </element>
