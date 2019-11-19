@@ -31,19 +31,19 @@
 		<%-- COLOCAR EN ESTE MENU TODO LO QUE PUEDA VER UN ADMINISTRADOR --%>
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
-			<acme:menu-suboption code="master.menu.administrator.announcement" action="/administrator/announcement/list"/>
-			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
+			<acme:menu-suboption code="master.menu.administrator.announcement" action="/administrator/announcement/list"/>
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
-			<acme:menu-suboption code="master.menu.administrator.records" action="/administrator/records/list"/>
+			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
 			<acme:menu-suboption code="master.menu.administrator.records.create" action="/administrator/records/create"/>
+			<acme:menu-suboption code="master.menu.administrator.records" action="/administrator/records/list"/>
 			<acme:menu-suboption code="master.menu.administrator.banner.create" action="/administrator/banner/create"/>
-			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/list"/>
-			<acme:menu-suboption code="master.menu.administrator.customizationParameters.create" action="/administrator/customization-parameters/create"/>
 			<acme:menu-suboption code="master.menu.administrator.banner" action="/administrator/banner/list"/>
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show-data"/>
-			<acme:menu-suboption code="master.menu.administrator.investorRecord" action="/administrator/investor-record/list"/>
+			<acme:menu-suboption code="master.menu.administrator.customizationParameters.create" action="/administrator/customization-parameters/create"/>
+			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/list"/>
 			<acme:menu-suboption code="master.menu.administrator.investorRecord.create" action="/administrator/investor-record/create"/>
+			<acme:menu-suboption code="master.menu.administrator.investorRecord" action="/administrator/investor-record/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show-data"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
