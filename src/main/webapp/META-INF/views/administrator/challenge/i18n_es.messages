@@ -17,7 +17,7 @@ administrator.challenge.form.label.goalSilver = Obetivo para plata:
 administrator.challenge.form.label.rewardSilver = Recompensa de plata:
 administrator.challenge.form.label.goalGold = Objetivo para oro:
 administrator.challenge.form.label.rewardGold = Recompensa de oro:
-
+administrator.challenge.form.label.deadline.error = Debe ser en el futuro
 
 autenticated.challenge.form.button.return = Volver
 administrator.challenge.list.label.title = Título

@@ -402,7 +402,7 @@ InvestorRecord
 + name: String {NotBlank}
 + sector: String {NotBlank}
 + investingStatement: Double {NotNull}
-+ stars: Integer {min(0),max(5)}</panel_attributes>
++ stars: Double {Range(min = 0, max = 5)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

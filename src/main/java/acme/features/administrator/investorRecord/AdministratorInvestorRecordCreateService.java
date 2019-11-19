@@ -50,7 +50,7 @@ public class AdministratorInvestorRecordCreateService implements AbstractCreateS
 		result.setInvestingStatement(123456.78);
 		result.setName("Nombre de ejemplo");
 		result.setSector("Texto de ejemplo");
-		result.setStars(2);
+		result.setStars(2.0);
 
 		return result;
 	}

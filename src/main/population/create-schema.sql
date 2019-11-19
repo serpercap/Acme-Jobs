@@ -91,7 +91,7 @@
         `investing_statement` double precision,
         `name` varchar(255),
         `sector` varchar(255),
-        `stars` integer,
+        `stars` double precision,
         primary key (`id`)
     ) engine=InnoDB;
 
