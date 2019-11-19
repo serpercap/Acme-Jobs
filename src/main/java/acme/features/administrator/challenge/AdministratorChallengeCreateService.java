@@ -72,10 +72,6 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 	public void create(final Request<Challenge> request, final Challenge entity) {
 		assert request != null;
 		assert entity != null;
-		Date deadline;
-
-		deadline = new Date(System.currentTimeMillis() + 1);
-		entity.setDeadline(deadline);
 		this.repository.save(entity);
 
 	}
