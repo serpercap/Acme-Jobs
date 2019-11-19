@@ -49,9 +49,9 @@ public class AdministratorBannerCreateService implements AbstractCreateService<A
 	public Banner instantiate(final Request<Banner> request) {
 		Banner result = new Banner();
 
-		result.setPicture("Ejemplo de pintura");
-		result.setSlogan("Ejemplo de slogan");
-		result.setUrl("https://www.google.com");
+		result.setPicture("https://www.url-de-ejemplo.com");
+		result.setSlogan("Texto de ejemplo");
+		result.setUrl("https://www.url-de-ejemplo.com");
 		return result;
 	}
 

@@ -49,9 +49,15 @@ public class AdministratorRecordsCreateService implements AbstractCreateService<
 	public Records instantiate(final Request<Records> request) {
 		Records result = new Records();
 
-		result.setName("Name");
-		result.setCeo("Ceo");
-		result.setWebsite("https://www.google.com");
+		result.setName("Nombre de ejemplo");
+		result.setCeo("Nombre de ejemplo");
+		result.setWebsite("https://www.url-de-ejemplo.com");
+		result.setSector("Texto de ejemplo");
+		result.setDescription("Texto de ejemplo");
+		result.setPhone("+999 (9999) 999999");
+		result.setMail("ejemplo@ejemplo.com");
+		result.setStars(2.5);
+		result.setIncorporated("No");
 		return result;
 	}
 

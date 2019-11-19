@@ -52,11 +52,16 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		Challenge result = new Challenge();
 		Date deadline;
 
-		deadline = new Date(System.currentTimeMillis() - 1);
+		deadline = new Date(System.currentTimeMillis() + 86400000);
 		result.setDeadline(deadline);
-		result.setDescription("Example description");
-		result.setTitle("Titulo 1");
-		result.setTitle("Texto de ejemplo");
+		result.setDescription("Texto de ejemplo");
+		result.setTitle("Titulo de ejemplo");
+		result.setGoalBronze("Texto de ejemplo");
+		result.setRewardBronze("Texto de ejemplo");
+		result.setGoalSilver("Texto de ejemplo");
+		result.setRewardSilver("Texto de ejemplo");
+		result.setGoalGold("Texto de ejemplo");
+		result.setRewardGold("Texto de ejemplo");
 		return result;
 	}
 

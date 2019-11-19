@@ -47,6 +47,11 @@ public class AdministratorInvestorRecordCreateService implements AbstractCreateS
 	public InvestorRecord instantiate(final Request<InvestorRecord> request) {
 		InvestorRecord result = new InvestorRecord();
 
+		result.setInvestingStatement(123456.78);
+		result.setName("Nombre de ejemplo");
+		result.setSector("Texto de ejemplo");
+		result.setStars(2);
+
 		return result;
 	}
 

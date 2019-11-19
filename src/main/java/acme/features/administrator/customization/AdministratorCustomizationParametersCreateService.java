@@ -49,8 +49,8 @@ public class AdministratorCustomizationParametersCreateService implements Abstra
 		assert request != null;
 		CustomizationParameters result = new CustomizationParameters();
 		result.setSpamThreshold(1.0);
-		result.setSpamWordEN("Example");
-		result.setSpamWordES("Ejemplo");
+		result.setSpamWordEN("Sample word");
+		result.setSpamWordES("Palabra de ejemplo");
 		return result;
 	}
 

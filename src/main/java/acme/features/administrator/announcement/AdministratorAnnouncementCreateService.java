@@ -1,3 +1,4 @@
+
 package acme.features.administrator.announcement;
 
 import java.util.Date;
@@ -53,8 +54,8 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 
 		moment = new Date(System.currentTimeMillis() - 1);
 		result.setMoment(moment);
-		result.setMoreInfo("http://acme.com");
-		result.setTitle("Titulo 1");
+		result.setMoreInfo("http://url-de-ejemplo.com");
+		result.setTitle("Titulo de ejemplo");
 		result.setText("Texto de ejemplo");
 		return result;
 	}
