@@ -18,7 +18,4 @@ public interface AdministratorRecordsRepository extends AbstractRepository {
 	@Query("select a from Records a")
 	Collection<Records> findManyAll();
 
-	//	@Query("select a from Records a where a.stars = 5")
-	//	Collection<Records> find5Stars();
-
 }
