@@ -1,3 +1,4 @@
+
 package acme.features.administrator.announcement;
 
 import java.util.Date;
@@ -53,7 +54,7 @@ public class AdministratorAnnouncementUpdateService implements AbstractUpdateSer
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findOneAnnouncementById(id);
 		return result;
 	}
 
