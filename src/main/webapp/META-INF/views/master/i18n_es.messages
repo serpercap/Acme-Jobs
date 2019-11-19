@@ -57,6 +57,7 @@ master.menu.administrator.investorRecord.create= Crear nuevo registro de inversi
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request.create = Crear request
 
 # master.menu.consumer ##########################################################
 

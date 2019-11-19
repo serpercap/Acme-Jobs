@@ -59,6 +59,7 @@ master.menu.administrator.investorRecord.create= Create new InvestorRecord
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request.create = Create request
 
 # master.menu.consumer ##########################################################
 

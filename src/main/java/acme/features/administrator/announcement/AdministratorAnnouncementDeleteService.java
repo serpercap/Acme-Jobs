@@ -1,4 +1,3 @@
-
 package acme.features.administrator.announcement;
 
 import org.springframework.beans.factory.annotation.Autowired;
