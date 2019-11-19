@@ -13,7 +13,9 @@
 	<acme:form-textarea code="authenticated.offer.form.label.text" path="text"/>
 	<acme:form-textbox code="authenticated.offer.form.label.ticker" path="ticker"/>
 	
+	<jstl:if test="${command == 'create'}">
 	<acme:form-checkbox code="authenticated.offer.form.label.accept" path="accept"/>
+	</jstl:if>
 	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.offer.form.button.create" action="/consumer/offer/create"/>
 	<acme:form-return code="authenticated.offer.form.button.return"/>
