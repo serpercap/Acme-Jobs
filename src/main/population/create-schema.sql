@@ -129,7 +129,7 @@
         `version` integer not null,
         `ceo` varchar(255),
         `description` varchar(255),
-        `incorporated` varchar(255),
+        `incorporated` bit,
         `mail` varchar(255),
         `name` varchar(255),
         `phone` varchar(255),

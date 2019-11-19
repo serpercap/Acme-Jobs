@@ -57,7 +57,7 @@ public class AdministratorRecordsCreateService implements AbstractCreateService<
 		result.setPhone("+999 (9999) 999999");
 		result.setMail("ejemplo@ejemplo.com");
 		result.setStars(2.5);
-		result.setIncorporated("No");
+		result.setIncorporated(false);
 		return result;
 	}
 

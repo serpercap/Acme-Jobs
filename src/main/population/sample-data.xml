@@ -171,7 +171,7 @@
 		<property name="phone" value="+34 66356995"/>
 		<property name="mail" value="sergio@gmail.com"/>
 		<property name="stars" value="5.0"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 	</bean>
 	<bean id="Record02" class="acme.entities.records.Records">
@@ -183,7 +183,7 @@
 		<property name="phone" value="+912 (1231) 999549"/>
 		<property name="mail" value="capi@gmail.com"/>
 		<property name="stars" value="4.3"/>
-		<property name="incorporated" value="No"/>
+		<property name="incorporated" value="false"/>
 		</bean>
 		<bean id="Record03" class="acme.entities.records.Records">
 		<property name="name" value="KimTe"/>
@@ -203,7 +203,7 @@
 		<property name="website" value="https://www.yahoo.com"/>
 		<property name="phone" value="999549"/>
 		<property name="mail" value="capi@gmail.com"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 		</bean>
 		<bean id="Record05" class="acme.entities.records.Records">
@@ -214,7 +214,7 @@
 		<property name="website" value="https://www.yahoo.com"/>
 		<property name="phone" value="999549"/>
 		<property name="mail" value="algo@gmail.com"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 		</bean>
 		

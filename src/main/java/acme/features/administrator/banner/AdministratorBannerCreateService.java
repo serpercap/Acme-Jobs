@@ -14,7 +14,7 @@ import acme.framework.services.AbstractCreateService;
 @Service
 public class AdministratorBannerCreateService implements AbstractCreateService<Administrator, Banner> {
 
-	//Internal State -----------------------------
+	//Internal State ----------------------------
 	@Autowired
 	AdministratorBannerRepository repository;
 

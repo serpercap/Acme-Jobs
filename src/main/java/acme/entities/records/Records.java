@@ -51,6 +51,6 @@ public class Records extends DomainEntity {
 	@Range(min = 0, max = 5)
 	private Double				stars;
 
-	private String				incorporated;
+	private Boolean				incorporated;
 
 }
