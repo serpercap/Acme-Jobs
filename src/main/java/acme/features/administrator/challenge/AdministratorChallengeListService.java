@@ -1,16 +1,5 @@
-/*
- * AuthenticatedChallengeListService.java
- *
- * Copyright (c) 2019 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
-package acme.features.authenticated.challenge;
+package acme.features.administrator.challenge;
 
 import java.util.Collection;
 
@@ -20,24 +9,21 @@ import org.springframework.stereotype.Service;
 import acme.entities.challenge.Challenge;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedChallengeListService implements AbstractListService<Authenticated, Challenge> {
+public class AdministratorChallengeListService implements AbstractListService<Administrator, Challenge> {
 
-	// Internal state ---------------------------------------------------------
-
+	//Internal State -----------------------------
 	@Autowired
-	private AuthenticatedChallengeRepository repository;
-
-	// AbstractListService<Authenticated, Challenge> interface ---------------------------
+	AdministratorChallengeRepository repository;
 
 
+	// AbstractListService<administrator, Challenge>
 	@Override
 	public boolean authorise(final Request<Challenge> request) {
 		assert request != null;
-
 		return true;
 	}
 
@@ -48,6 +34,7 @@ public class AuthenticatedChallengeListService implements AbstractListService<Au
 		assert model != null;
 
 		request.unbind(entity, model, "title", "deadline", "description", "goalBronze", "rewardBronze", "goalSilver", "rewardSilver", "goalGold", "rewardGold");
+
 	}
 
 	@Override
@@ -55,9 +42,7 @@ public class AuthenticatedChallengeListService implements AbstractListService<Au
 		assert request != null;
 
 		Collection<Challenge> result;
-
 		result = this.repository.findManyAll();
-
 		return result;
 	}
 

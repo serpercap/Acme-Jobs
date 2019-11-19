@@ -125,7 +125,7 @@
 		<property name="spamThreshold" value="1.0"/>
 	</bean>
   
-<bean id="challenge01" class="acme.entities.challenges.Challenge">
+<bean id="challenge01" class="acme.entities.challenge.Challenge">
 	<property name="title" value="Sample challenge 01" />
 	<property name="deadline" value="2020/01/01 00:00" />
 	<property name="description" value="Login once a day for as many days as possible to receive a prize!" />
@@ -137,7 +137,7 @@
 	<property name="rewardGold" value="10 days premium" />
 </bean>
 
-<bean id="challenge02" class="acme.entities.challenges.Challenge">
+<bean id="challenge02" class="acme.entities.challenge.Challenge">
 	<property name="title" value="Sample challenge 02" />
 	<property name="deadline" value="2019/12/05 00:00" />
 	<property name="description" value="Post as many announcements as possible to receive a prize!" />
@@ -149,7 +149,7 @@
 	<property name="rewardGold" value="10 days premium" />
 </bean>
 
-<bean id="challenge03" class="acme.entities.challenges.Challenge">
+<bean id="challenge03" class="acme.entities.challenge.Challenge">
 	<property name="title" value="Sample challenge 03" />
 	<property name="deadline" value="2020/12/29 00:00" />
 	<property name="description" value="Be a member for as long as possible to receive a prize!" />
