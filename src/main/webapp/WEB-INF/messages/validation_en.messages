@@ -25,7 +25,7 @@ javax.validation.constraints.Past.message = Must be in the past
 javax.validation.constraints.Pattern.message = Must match pattern "{regexp}"
 javax.validation.constraints.Size.message = Must have between {min} and {max} items
 
-org.hibernate.validator.constraints.CreditCardNumber.message = Invalid credit card number
+org.hibernate.validator.constraints.cardNumber.message = Invalid credit card number
 org.hibernate.validator.constraints.Length.message = Length must be between {min} and {max}
 org.hibernate.validator.constraints.Range.message = Must be between {min} and {max}
 org.hibernate.validator.constraints.SafeHtml.message = The HTML contents may be unsafe

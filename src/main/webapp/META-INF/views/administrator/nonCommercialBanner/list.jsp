@@ -17,5 +17,5 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.banner.list.label.url" path="url" width="40%"/>
+	<acme:list-column code="administrator.nonCommercialBanner.list.label.url" path="url" width="40%"/>
 </acme:list>

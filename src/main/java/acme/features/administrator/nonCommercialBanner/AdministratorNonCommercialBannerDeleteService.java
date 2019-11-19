@@ -1,10 +1,10 @@
 
-package acme.features.administrator.banner;
+package acme.features.administrator.nonCommercialBanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.banner.Banner;
+import acme.entities.nonCommercialBanner.NonCommercialBanner;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,21 +12,21 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorBannerDeleteService implements AbstractDeleteService<Administrator, Banner> {
+public class AdministratorNonCommercialBannerDeleteService implements AbstractDeleteService<Administrator, NonCommercialBanner> {
 
 	//Internal State -----------------------------
 	@Autowired
-	AdministratorBannerRepository repository;
+	AdministratorNonCommercialBannerRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Banner> request) {
+	public boolean authorise(final Request<NonCommercialBanner> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Banner> request, final Banner entity, final Errors errors) {
+	public void bind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -36,20 +36,20 @@ public class AdministratorBannerDeleteService implements AbstractDeleteService<A
 	}
 
 	@Override
-	public void unbind(final Request<Banner> request, final Banner entity, final Model model) {
+	public void unbind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "url");
+		request.unbind(entity, model, "picture", "slogan", "url", "jingle");
 
 	}
 
 	@Override
-	public Banner findOne(final Request<Banner> request) {
+	public NonCommercialBanner findOne(final Request<NonCommercialBanner> request) {
 		assert request != null;
 
-		Banner result;
+		NonCommercialBanner result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -59,7 +59,7 @@ public class AdministratorBannerDeleteService implements AbstractDeleteService<A
 	}
 
 	@Override
-	public void validate(final Request<Banner> request, final Banner entity, final Errors errors) {
+	public void validate(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -67,7 +67,7 @@ public class AdministratorBannerDeleteService implements AbstractDeleteService<A
 	}
 
 	@Override
-	public void delete(final Request<Banner> request, final Banner entity) {
+	public void delete(final Request<NonCommercialBanner> request, final NonCommercialBanner entity) {
 		assert request != null;
 		assert entity != null;
 

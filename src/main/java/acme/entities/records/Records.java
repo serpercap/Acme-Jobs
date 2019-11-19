@@ -41,7 +41,7 @@ public class Records extends DomainEntity {
 	private String				website;
 
 	@NotBlank
-	@Pattern(regexp = "\\+\\d{1,3}\\s\\(\\d{1,4}\\)\\s\\d{6,10}|\\(\\d{1,4}\\)\\s\\d{6,10}|\\+\\d{1,3}\\s\\d{6,10}|\\d{6,10}")
+	@Pattern(regexp = "(\\+\\d{1,3}\\s)?(\\(\\d{1,4}\\)\\s)?\\d{6,10}")
 	private String				phone;
 
 	@Email
@@ -51,6 +51,6 @@ public class Records extends DomainEntity {
 	@Range(min = 0, max = 5)
 	private Double				stars;
 
-	private String				incorporated;
+	private Boolean				incorporated;
 
 }

@@ -153,7 +153,7 @@
 		<property name="phone" value="+34 66356995"/>
 		<property name="mail" value="sergio@gmail.com"/>
 		<property name="stars" value="5.0"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 	</bean>
 	<bean id="Record02" class="acme.entities.records.Records">
@@ -165,7 +165,7 @@
 		<property name="phone" value="+912 (1231) 999549"/>
 		<property name="mail" value="capi@gmail.com"/>
 		<property name="stars" value="4.3"/>
-		<property name="incorporated" value="No"/>
+		<property name="incorporated" value="false"/>
 		</bean>
 		<bean id="Record03" class="acme.entities.records.Records">
 		<property name="name" value="KimTe"/>
@@ -185,7 +185,7 @@
 		<property name="website" value="https://www.yahoo.com"/>
 		<property name="phone" value="999549"/>
 		<property name="mail" value="capi@gmail.com"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 		</bean>
 		<bean id="Record05" class="acme.entities.records.Records">
@@ -196,19 +196,19 @@
 		<property name="website" value="https://www.yahoo.com"/>
 		<property name="phone" value="999549"/>
 		<property name="mail" value="algo@gmail.com"/>
-		<property name="incorporated" value="Yes"/>
+		<property name="incorporated" value="true"/>
 		
 		</bean>
 		
 		<!-- Banners -->
-		<bean id="Banner01" class="acme.entities.banner.CommercialBanner">
+		<bean id="Banner01" class="acme.entities.commercialBanner.CommercialBanner">
 		<property name="picture" value="https://www.ofrendavirgendelpilar.com/wp-content/uploads/2018/09/rosa-roja-ofrenda.jpg"/>
 		<property name="slogan" value="Flowers"/>
 		<property name="url" value="https://www.flores.com"/>
-		<property name="creditCard" value="1111111111111111"/>
+		<property name="card" value="1111111111111111"/>
 		</bean>
 	
-		<bean id="Banner02" class="acme.entities.banner.NonCommercialBanner">
+		<bean id="Banner02" class="acme.entities.nonCommercialBanner.NonCommercialBanner">
 		<property name="picture" value="http://www.estadiodeportivo.com/elementosWeb/gestionCajas/EDE/Image/escudo-Real-Betis-2012.jpg"/>
 		<property name="slogan" value="Manquepierda"/>
 		<property name="url" value="https://www.betis.com"/>

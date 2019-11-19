@@ -30,15 +30,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `banner` (
-       `id` integer not null,
-        `version` integer not null,
-        `picture` varchar(255),
-        `slogan` varchar(255),
-        `url` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -57,10 +48,10 @@
     create table `commercial_banner` (
        `id` integer not null,
         `version` integer not null,
+        `card` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
-        `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -98,10 +89,10 @@
     create table `non_commercial_banner` (
        `id` integer not null,
         `version` integer not null,
+        `jingle` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
-        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -132,7 +123,7 @@
         `version` integer not null,
         `ceo` varchar(255),
         `description` varchar(255),
-        `incorporated` varchar(255),
+        `incorporated` bit,
         `mail` varchar(255),
         `name` varchar(255),
         `phone` varchar(255),
