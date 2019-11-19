@@ -17,6 +17,7 @@ administrator.challenge.form.label.goalSilver = Silver goal:
 administrator.challenge.form.label.rewardSilver = Silver reward:
 administrator.challenge.form.label.goalGold = Gold goal:
 administrator.challenge.form.label.rewardGold = Gold reward:
+administrator.challenge.form.label.deadline.error = Must be in future
 
 autenticated.challenge.form.button.return = Return
 administrator.challenge.list.label.title = Title

@@ -1,6 +1,8 @@
 
 package acme.features.administrator.customization;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +34,7 @@ public class AdministratorCustomizationParametersShowService implements Abstract
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spamWordEN", "spamWordES", "spamThreshold");
+		request.unbind(entity, model, "spamWords", "spamThreshold");
 
 	}
 
@@ -41,10 +43,10 @@ public class AdministratorCustomizationParametersShowService implements Abstract
 		assert request != null;
 
 		CustomizationParameters result;
-		int id;
+		Collection<CustomizationParameters> collection;
+		collection = this.repository.findManyAll();
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = collection.stream().findFirst().get();
 
 		return result;
 	}

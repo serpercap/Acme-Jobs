@@ -1,6 +1,8 @@
 
 package acme.features.administrator.customization;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +33,7 @@ public class AdministratorCustomizationParametersCreateService implements Abstra
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "spamWords", "spamThreshold");
 
 	}
 
@@ -41,16 +43,17 @@ public class AdministratorCustomizationParametersCreateService implements Abstra
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spamWordEN", "spamWordES", "spamThreshold");
+		request.unbind(entity, model, "spamWords", "spamThreshold");
 	}
 
 	@Override
 	public CustomizationParameters instantiate(final Request<CustomizationParameters> request) {
 		assert request != null;
-		CustomizationParameters result = new CustomizationParameters();
-		result.setSpamThreshold(1.0);
-		result.setSpamWordEN("Sample word");
-		result.setSpamWordES("Palabra de ejemplo");
+		CustomizationParameters result;
+		Collection<CustomizationParameters> collection;
+		collection = this.repository.findManyAll();
+
+		result = collection.stream().findFirst().get();
 		return result;
 	}
 
@@ -59,14 +62,17 @@ public class AdministratorCustomizationParametersCreateService implements Abstra
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		errors.state(request, !request.getModel().getString("newSpamWord").isEmpty(), "newSpamWord", "administrator.customization.list.label.emptySpamWord");
 	}
 
 	@Override
 	public void create(final Request<CustomizationParameters> request, final CustomizationParameters entity) {
 		assert request != null;
 		assert entity != null;
+		String newSpamWord;
+		newSpamWord = request.getModel().getString("newSpamWord");
 
+		entity.getSpamWords().add(newSpamWord);
 		this.repository.save(entity);
 
 	}

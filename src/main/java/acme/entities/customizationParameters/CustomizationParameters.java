@@ -1,10 +1,13 @@
 
 package acme.entities.customizationParameters;
 
+import java.util.Collection;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
@@ -21,10 +24,9 @@ public class CustomizationParameters extends DomainEntity {
 	 */
 	private static final long	serialVersionUID	= 1L;
 
-	@NotBlank
-	private String				spamWordEN;
-	@NotBlank
-	private String				spamWordES;
+	@NotNull
+	@ElementCollection(fetch = FetchType.EAGER)
+	private Collection<String>	spamWords;
 
 	@Max(1)
 	@Min(0)

@@ -9,13 +9,13 @@
 # they accept any liabilities with respect to them.
 
 
-administrator.customization.form.label.spamWordsEN = Palabras de spam en Ingles
-administrator.customization.form.label.spamWordsES = Palabras de spam en Español
+administrator.customization.form.label.spamWords = Palabras de spam
 administrator.customization.form.label.spamThreshold = Spam threshold
 administrator.customization.list.label.spamWordsEN = Palabras de spam en Ingles
 administrator.customization.list.label.spamWordsES = Palabras de spam en Español
 
-
+administrator.customization.list.label.emptySpamWord = No debe estar en blanco
+administrator.customization.form.label.add = Nueva palabra de spam
 administrator.customization.form.button.update = Actualizar
 administrator.customization.form.button.create = Crear
 administrator.customization.form.button.delete = Eliminar
