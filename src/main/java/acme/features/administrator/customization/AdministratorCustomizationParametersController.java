@@ -20,11 +20,7 @@ public class AdministratorCustomizationParametersController extends AbstractCont
 	@Autowired
 	AdministratorCustomizationParametersShowService		showService;
 	@Autowired
-	AdministratorCustomizationParametersListService		listService;
-	@Autowired
 	AdministratorCustomizationParametersCreateService	createService;
-	@Autowired
-	AdministratorCustomizationParametersUpdateService	updateService;
 	@Autowired
 	AdministratorCustomizationParametersDeleteService	deleteService;
 	//Constructors
@@ -33,9 +29,7 @@ public class AdministratorCustomizationParametersController extends AbstractCont
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 }

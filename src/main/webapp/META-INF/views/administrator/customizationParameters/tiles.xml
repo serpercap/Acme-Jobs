@@ -18,12 +18,8 @@
 	
 <tiles-definitions>
 
-	<definition name="administrator/customization-parameters/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/customizationParameters/list.jsp" />
-	</definition>
-	
 	<definition name="administrator/customization-parameters/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/customizationParameters/form.jsp" />
 	</definition>
-
+	
 </tiles-definitions>

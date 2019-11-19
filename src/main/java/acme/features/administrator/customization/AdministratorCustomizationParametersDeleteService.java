@@ -31,7 +31,7 @@ public class AdministratorCustomizationParametersDeleteService implements Abstra
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "spamThreshold");
 
 	}
 
@@ -41,7 +41,7 @@ public class AdministratorCustomizationParametersDeleteService implements Abstra
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spamWordEN", "spamWordES", "spamThreshold");
+		request.unbind(entity, model, "spamWords", "spamThreshold");
 	}
 
 	@Override
@@ -67,8 +67,14 @@ public class AdministratorCustomizationParametersDeleteService implements Abstra
 	public void delete(final Request<CustomizationParameters> request, final CustomizationParameters entity) {
 		assert request != null;
 		assert entity != null;
+		String spamword;
+		spamword = request.getModel().getString("spamword");
 
-		this.repository.delete(entity);
+		if (entity.getSpamWords().contains(spamword)) {
+			entity.getSpamWords().remove(spamword);
+			this.repository.save(entity);
+		}
+
 	}
 
 }

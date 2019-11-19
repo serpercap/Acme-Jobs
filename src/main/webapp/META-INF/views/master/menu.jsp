@@ -40,7 +40,7 @@
 			<acme:menu-suboption code="master.menu.administrator.banner.create" action="/administrator/banner/create"/>
 			<acme:menu-suboption code="master.menu.administrator.banner" action="/administrator/banner/list"/>
 			<acme:menu-suboption code="master.menu.administrator.customizationParameters.create" action="/administrator/customization-parameters/create"/>
-			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/list"/>
+			<acme:menu-suboption code="master.menu.administrator.customizationParameters" action="/administrator/customization-parameters/show"/>
 			<acme:menu-suboption code="master.menu.administrator.investorRecord.create" action="/administrator/investor-record/create"/>
 			<acme:menu-suboption code="master.menu.administrator.investorRecord" action="/administrator/investor-record/list"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show-data"/>

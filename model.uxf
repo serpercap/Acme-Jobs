@@ -362,8 +362,7 @@ Offer
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 CustomizationParameters
 --
-+ spamWordsEN: String {NotBlank}
-+ spamWordsES: String {NotBlank}
++ spamWords: Collection&lt;String&gt; {NotNull, ElementCollection}
 + spamThreshold: Double{NotNull, min(0), max(1)}</panel_attributes>
     <additional_attributes/>
   </element>
