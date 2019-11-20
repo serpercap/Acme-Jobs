@@ -260,7 +260,7 @@ CREATE TABLE `challenge` (
 
 LOCK TABLES `challenge` WRITE;
 /*!40000 ALTER TABLE `challenge` DISABLE KEYS */;
-INSERT INTO `challenge` VALUES (23,0,'2019-12-31 23:00:00.000000','Login once a day for as many days as possible to receive a prize!','Login for 5 days straight!','Login for 30 days straight!','Login for 15 days straight!','1 day premium','10 days premium','5 days premium','Sample challenge 01'),(24,0,'2019-12-04 23:00:00.000000','Post as many announcements as possible to receive a prize!','Post 5 announcements!','Post 20 announcements!','Post 10 announcements!','1 day premium','10 days premium','5 days premium','Sample challenge 02'),(25,0,'2020-12-28 23:00:00.000000','Be a member for as long as possible to receive a prize!','Be a member for over a month!','Be a member for over a year!','Be a member for over 6 months!','1 week premium','Free premium','3 months premium','Sample challenge 03');
+INSERT INTO `challenge` VALUES (17,0,'2019-12-31 23:00:00.000000','Login once a day for as many days as possible to receive a prize!','Login for 5 days straight!','Login for 30 days straight!','Login for 15 days straight!','1 day premium','10 days premium','5 days premium','Sample challenge 01'),(18,0,'2019-12-04 23:00:00.000000','Post as many announcements as possible to receive a prize!','Post 5 announcements!','Post 20 announcements!','Post 10 announcements!','1 day premium','10 days premium','5 days premium','Sample challenge 02'),(19,0,'2020-12-28 23:00:00.000000','Be a member for as long as possible to receive a prize!','Be a member for over a month!','Be a member for over a year!','Be a member for over 6 months!','1 week premium','Free premium','3 months premium','Sample challenge 03');
 /*!40000 ALTER TABLE `challenge` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -274,10 +274,10 @@ DROP TABLE IF EXISTS `commercial_banner`;
 CREATE TABLE `commercial_banner` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
+  `card` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
   `slogan` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
-  `credit_card` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -288,7 +288,7 @@ CREATE TABLE `commercial_banner` (
 
 LOCK TABLES `commercial_banner` WRITE;
 /*!40000 ALTER TABLE `commercial_banner` DISABLE KEYS */;
-INSERT INTO `commercial_banner` VALUES (31,0,'https://www.ofrendavirgendelpilar.com/wp-content/uploads/2018/09/rosa-roja-ofrenda.jpg','Flowers','https://www.flores.com','1111111111111111');
+INSERT INTO `commercial_banner` VALUES (25,0,'1111111111111111','https://www.ofrendavirgendelpilar.com/wp-content/uploads/2018/09/rosa-roja-ofrenda.jpg','Flowers','https://www.flores.com');
 /*!40000 ALTER TABLE `commercial_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,8 +331,6 @@ CREATE TABLE `customization_parameters` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
   `spam_threshold` double DEFAULT NULL,
-  `spam_worden` varchar(255) DEFAULT NULL,
-  `spam_wordes` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -343,8 +341,33 @@ CREATE TABLE `customization_parameters` (
 
 LOCK TABLES `customization_parameters` WRITE;
 /*!40000 ALTER TABLE `customization_parameters` DISABLE KEYS */;
-INSERT INTO `customization_parameters` VALUES (16,0,1,'Sex','Sexo'),(17,0,1,'hard core','hard core'),(18,0,1,'viagra','viagra'),(19,0,1,'nigeria','nigeria'),(20,0,1,'you’ve won','has ganado'),(21,0,1,'million dollar','millon de dolares'),(22,0,1,'cialis','cialis');
+INSERT INTO `customization_parameters` VALUES (16,2,1);
 /*!40000 ALTER TABLE `customization_parameters` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `customization_parameters_spam_words`
+--
+
+DROP TABLE IF EXISTS `customization_parameters_spam_words`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customization_parameters_spam_words` (
+  `customization_parameters_id` int(11) NOT NULL,
+  `spam_words` varchar(255) DEFAULT NULL,
+  KEY `FKhcqquyqtys40tece78apjsbyt` (`customization_parameters_id`),
+  CONSTRAINT `FKhcqquyqtys40tece78apjsbyt` FOREIGN KEY (`customization_parameters_id`) REFERENCES `customization_parameters` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customization_parameters_spam_words`
+--
+
+LOCK TABLES `customization_parameters_spam_words` WRITE;
+/*!40000 ALTER TABLE `customization_parameters_spam_words` DISABLE KEYS */;
+INSERT INTO `customization_parameters_spam_words` VALUES (16,'cialis'),(16,'million dollar'),(16,'millon de dolares'),(16,'you\'ve won'),(16,'has ganado'),(16,'nigeria'),(16,'viagra'),(16,'hard core'),(16,'sex'),(16,'sexo');
+/*!40000 ALTER TABLE `customization_parameters_spam_words` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -442,7 +465,7 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (41);
+INSERT INTO `hibernate_sequence` VALUES (36);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -459,7 +482,7 @@ CREATE TABLE `investor_record` (
   `investing_statement` double DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `sector` varchar(255) DEFAULT NULL,
-  `stars` int(11) DEFAULT NULL,
+  `stars` double DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -470,7 +493,7 @@ CREATE TABLE `investor_record` (
 
 LOCK TABLES `investor_record` WRITE;
 /*!40000 ALTER TABLE `investor_record` DISABLE KEYS */;
-INSERT INTO `investor_record` VALUES (33,0,10,'Titulo01','Sector01',2),(34,0,20.5,'Titulo02','Sector02',1),(35,0,50.2,'Titulo03','Sector03',1),(36,0,5,'Titulo04','Sector04',4),(37,0,35.3,'Titulo05','Sector04',5);
+INSERT INTO `investor_record` VALUES (27,0,10,'Titulo01','Sector01',2),(28,0,20.5,'Titulo02','Sector02',1),(29,0,50.2,'Titulo03','Sector03',1),(30,0,5,'Titulo04','Sector04',4),(31,0,35.3,'Titulo05','Sector04',5);
 /*!40000 ALTER TABLE `investor_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -511,10 +534,10 @@ DROP TABLE IF EXISTS `non_commercial_banner`;
 CREATE TABLE `non_commercial_banner` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
+  `jingle` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
   `slogan` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
-  `jingle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -525,7 +548,7 @@ CREATE TABLE `non_commercial_banner` (
 
 LOCK TABLES `non_commercial_banner` WRITE;
 /*!40000 ALTER TABLE `non_commercial_banner` DISABLE KEYS */;
-INSERT INTO `non_commercial_banner` VALUES (32,0,'http://www.estadiodeportivo.com/elementosWeb/gestionCajas/EDE/Image/escudo-Real-Betis-2012.jpg','Manquepierda','https://www.betis.com','patata');
+INSERT INTO `non_commercial_banner` VALUES (26,0,'patata','http://www.estadiodeportivo.com/elementosWeb/gestionCajas/EDE/Image/escudo-Real-Betis-2012.jpg','Manquepierda','https://www.betis.com');
 /*!40000 ALTER TABLE `non_commercial_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -601,7 +624,7 @@ CREATE TABLE `records` (
   `version` int(11) NOT NULL,
   `ceo` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `incorporated` varchar(255) DEFAULT NULL,
+  `incorporated` bit(1) DEFAULT NULL,
   `mail` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
@@ -618,7 +641,7 @@ CREATE TABLE `records` (
 
 LOCK TABLES `records` WRITE;
 /*!40000 ALTER TABLE `records` DISABLE KEYS */;
-INSERT INTO `records` VALUES (26,0,'Sergio','Description01','Yes','sergio@gmail.com','Capi, Inc.','+34 66356995','Technology',5,'https://www.google.com'),(27,0,'Juan','Description02','No','capi@gmail.com','Laks, LLC','+912 (1231) 999549','Sports',4.3,'https://www.yahoo.com'),(28,0,'Pepe','Description02',NULL,'capi@gmail.com','KimTe','(1231) 999549','Industrial',4.3,'https://www.yahoo.com'),(29,0,'Rocío','Description02','Yes','capi@gmail.com','Jaws, Inc.','999549','Security',NULL,'https://www.yahoo.com'),(30,0,'Adri','Description10','Yes','algo@gmail.com','Alguien, Inc.','999549','Security',NULL,'https://www.yahoo.com');
+INSERT INTO `records` VALUES (20,0,'Sergio','Description01',_binary '','sergio@gmail.com','Capi, Inc.','+34 66356995','Technology',5,'https://www.google.com'),(21,0,'Juan','Description02',_binary '\0','capi@gmail.com','Laks, LLC','+912 (1231) 999549','Sports',4.3,'https://www.yahoo.com'),(22,0,'Pepe','Description02',NULL,'capi@gmail.com','KimTe','(1231) 999549','Industrial',4.3,'https://www.yahoo.com'),(23,0,'Rocío','Description02',_binary '','capi@gmail.com','Jaws, Inc.','999549','Security',NULL,'https://www.yahoo.com'),(24,0,'Adri','Description10',_binary '','algo@gmail.com','Alguien, Inc.','999549','Security',NULL,'https://www.yahoo.com');
 /*!40000 ALTER TABLE `records` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -650,7 +673,7 @@ CREATE TABLE `request` (
 
 LOCK TABLES `request` WRITE;
 /*!40000 ALTER TABLE `request` DISABLE KEYS */;
-INSERT INTO `request` VALUES (38,0,'2019-12-27 09:10:00.000000','Esta es una descripción de prueba','2019-10-27 09:10:00.000000',501.2,'EUR','RABCD-91234','Titulo01'),(39,0,'2020-03-15 12:15:00.000000','¡Un coche por favor!','2019-11-03 09:10:00.000000',9999.99,'EUR','RABGH-98534','Quiero un coche de lujo'),(40,0,'2020-09-03 07:30:00.000000','O una caravana','2019-09-03 07:30:00.000000',999.99,'EUR','RUIGH-98744','Para ser feliz quiero un camión');
+INSERT INTO `request` VALUES (32,0,'2019-12-27 09:10:00.000000','Esta es una descripción de prueba','2019-10-27 09:10:00.000000',501.2,'EUR','RABCD-91234','Titulo01'),(33,0,'2020-03-15 12:15:00.000000','¡Un coche por favor!','2019-11-03 09:10:00.000000',9999.99,'EUR','RABGH-98534','Quiero un coche de lujo'),(34,0,'2020-09-03 07:30:00.000000','O una caravana','2019-09-03 07:30:00.000000',999.99,'EUR','RUIGH-98744','Para ser feliz quiero un camión');
 /*!40000 ALTER TABLE `request` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -707,7 +730,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$UY2ZiGZR/eMTpspJaTaeEuosfHuqMZOIIM3HmgqqjrOyzCqodfVcC','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$RpdruV/Pfk6yDjD0TwBqbe9uz/SoVQBnWfOprgMB0YVhoAr46QFDa','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Tp1w90Cz1S6KJ07V0ADCE.yrERskzfaMuHVoCumI6c5PE3jRHicqm','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$G.tMVvDqEKElWm4g/pUA3.t.jxLm0fLj6Ob.CHLAhvxqgx8kNOvoO','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -720,4 +743,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-06 17:51:56
+-- Dump completed on 2019-11-20 10:42:56
